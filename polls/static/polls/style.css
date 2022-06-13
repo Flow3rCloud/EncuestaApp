@@ -1,0 +1,57 @@
+body{
+    background:rgb(73, 73, 141) url("images/fondo.jpg") no-repeat center fixed;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0px;
+}
+
+.center{
+    margin-top: 150px;
+    text-align: center;
+}
+
+.center a{
+    color: rgb(237, 237, 248);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+fieldset {
+    color:whitesmoke;
+    width:50%;
+    margin-top:150px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:rgba(7, 26, 61, 0.685)
+}
+
+fieldset h2{
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+h1{
+    color: rgb(126, 162, 228);
+    font-size: 45px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+h3{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+li{
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+a{
+    color: rgb(237, 237, 248);
+    text-decoration: none;
+}
+

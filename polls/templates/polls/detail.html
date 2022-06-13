@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<div style="">
+    <form action= "{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h2>{{question.question_text}}</h2></legend>
+            {% if error_message %}
+            <p class="error" style="margin-top:0px;color:coral">{{error_message}}</p>
+            {% endif %}
+            {% for choice in question.choice_set.all  %}
+            <input 
+                type="radio" 
+                name="choice" 
+                id="choice{{ forloop.counter}}" 
+                value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter}}">{{ choice.choice_text }}</label>
+            <br>
+            {% endfor %}
+            <br>
+            <input type="submit" value="Votar">
+        </fieldset>
+    </form>
+</div> 
+
+
+{% comment %} <h1>{{ question.question_text}}</h1>
+<ul>
+    {% for choice in question.choice_set.all  %}
+        <li>{{ choice.choice_text }}</li>
+    {% endfor %}
+</ul> {% endcomment %}
